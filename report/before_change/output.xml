@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-26T02:54:03.407061" rpa="false" schemaversion="5">
+<suite id="s1" name="test N" source="C:\Users\mohisl\OneDrive - wapice.com\Desktop\VSCode Workspace\LOF2024\selfhealing-robot-framework-main\selfhealing-with-BS\test_N.robot">
+<test id="s1-t1" name="run test" line="13">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Buttons Test">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:54:03.715829" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/index.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T02:54:03.715829" elapsed="1.553108"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T02:54:05.268937" elapsed="0.025999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:54:05.296940" level="INFO">Clicking button 'id= button1'.</msg>
+<arg>id= ${id1}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T02:54:05.295940" elapsed="0.092108"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-26T02:54:07.389378" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-26T02:54:05.389048" elapsed="2.000330"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:54:07.389882" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-04-26T02:54:07.389378" elapsed="0.005639"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:54:07.396030" level="INFO">Clicking button 'id= button2'.</msg>
+<arg>id= ${id2}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T02:54:07.395017" elapsed="0.098636"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-26T02:54:09.494564" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-26T02:54:07.493653" elapsed="2.000911"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:54:09.494564" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-04-26T02:54:09.494564" elapsed="0.006006"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-26T02:54:09.500570" elapsed="2.149446"/>
+</kw>
+<arg>button1</arg>
+<arg>button2</arg>
+<status status="PASS" start="2024-04-26T02:54:03.715829" elapsed="7.934187"/>
+</kw>
+<msg time="2024-04-26T02:54:11.651032" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>Click Buttons Test</arg>
+<arg>button1</arg>
+<arg>button2</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-26T02:54:03.715829" elapsed="7.935203"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${result}==False</arg>
+<arg>Run Keyword</arg>
+<arg>Find and Use Optimal Button Locator</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-26T02:54:11.652327" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${result}==False</arg>
+<arg>Rerun Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-26T02:54:11.653345" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-04-26T02:54:03.714843" elapsed="7.940497"/>
+</test>
+<status status="PASS" start="2024-04-26T02:54:03.409397" elapsed="8.248862"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="test N">test N</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-26T02:59:42.360358" rpa="false" schemaversion="5">
+<suite id="s1" name="test N" source="C:\Users\mohisl\OneDrive - wapice.com\Desktop\VSCode Workspace\LOF2024\selfhealing-robot-framework-main\selfhealing-with-BS\test_N.robot">
+<test id="s1-t1" name="run test" line="13">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Buttons Test">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:42.715816" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/index.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T02:59:42.715816" elapsed="1.664863"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.381675" elapsed="0.025003"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:44.407674" level="INFO">Clicking button 'id= button1'.</msg>
+<msg time="2024-04-26T02:59:44.582733" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-26T02:59:44.582733" level="FAIL">Button with locator 'id= button1' not found.</msg>
+<arg>id= ${id1}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-26T02:59:44.406678" elapsed="0.247311">Button with locator 'id= button1' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-04-26T02:59:44.653989" elapsed="0.000000"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2024-04-26T02:59:44.653989" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id= ${id2}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-26T02:59:44.655346" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-04-26T02:59:44.655346" elapsed="0.000000"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2024-04-26T02:59:44.655346" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-04-26T02:59:44.655346" elapsed="0.000000"/>
+</kw>
+<arg>button1</arg>
+<arg>button2</arg>
+<status status="FAIL" start="2024-04-26T02:59:42.715816" elapsed="1.939530">Button with locator 'id= button1' not found.</status>
+</kw>
+<msg time="2024-04-26T02:59:44.655346" level="INFO">${result} = False</msg>
+<var>${result}</var>
+<arg>Click Buttons Test</arg>
+<arg>button1</arg>
+<arg>button2</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-26T02:59:42.714757" elapsed="1.940589"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Find and Use Optimal Button Locator">
+<kw name="Find New Button Ids" owner="prac_test1">
+<msg time="2024-04-26T02:59:44.663360" level="INFO">${new_buttons} = ['button11', 'button22']</msg>
+<var>${new_buttons}</var>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-04-26T02:59:44.657359" elapsed="0.007082"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-26T02:59:44.664441" level="INFO">${id11} = button11</msg>
+<var>${id11}</var>
+<arg>${new_buttons}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.664441" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-04-26T02:59:44.664441" level="INFO">${idN1} = button11</msg>
+<arg>${idN1}</arg>
+<arg>${id11}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.664441" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-26T02:59:44.665360" level="INFO">${id22} = button22</msg>
+<var>${id22}</var>
+<arg>${new_buttons}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.664441" elapsed="0.000919"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-04-26T02:59:44.665360" level="INFO">${idN2} = button22</msg>
+<arg>${idN2}</arg>
+<arg>${id22}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.665360" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-26T02:59:44.656359" elapsed="0.009001"/>
+</kw>
+<arg>Find and Use Optimal Button Locator</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.656359" elapsed="0.009528"/>
+</kw>
+<arg>${result}==False</arg>
+<arg>Run Keyword</arg>
+<arg>Find and Use Optimal Button Locator</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.656359" elapsed="0.009528"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Rerun Test">
+<kw name="Click Buttons Test">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:44.667894" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/index.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.667894" elapsed="1.473252"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T02:59:46.142146" elapsed="0.021005"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:46.164150" level="INFO">Clicking button 'id= button11'.</msg>
+<arg>id= ${id1}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T02:59:46.164150" elapsed="0.074517"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-26T02:59:48.239036" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-26T02:59:46.238667" elapsed="2.000369"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:48.239567" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-04-26T02:59:48.239567" elapsed="0.007015"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:48.247580" level="INFO">Clicking button 'id= button22'.</msg>
+<arg>id= ${id2}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T02:59:48.246582" elapsed="0.095303"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-26T02:59:50.342335" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-26T02:59:48.341885" elapsed="2.000450"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-04-26T02:59:50.342842" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-04-26T02:59:50.342842" elapsed="0.004006"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-26T02:59:50.347849" elapsed="2.113109"/>
+</kw>
+<arg>${idN1}</arg>
+<arg>${idN2}</arg>
+<status status="PASS" start="2024-04-26T02:59:44.666892" elapsed="7.794066"/>
+</kw>
+<status status="PASS" start="2024-04-26T02:59:44.666892" elapsed="7.794066"/>
+</kw>
+<arg>${result}==False</arg>
+<arg>Rerun Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-26T02:59:44.665887" elapsed="7.795071"/>
+</kw>
+<status status="PASS" start="2024-04-26T02:59:42.713752" elapsed="9.748325"/>
+</test>
+<status status="PASS" start="2024-04-26T02:59:42.362938" elapsed="10.100146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="test N">test N</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
