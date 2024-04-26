@@ -18,12 +18,3 @@ def find_new_button_ids(url):
     else:
         print("Failed to fetch the webpage. Status code:", response.status_code)
         return None
-
-if __name__ == "__main__":
-    url = "http://localhost:8080/index.html"  # Replace with the URL of your webpage
-    button_ids = find_new_button_ids(url)
-    
-    if button_ids:
-        print("New button IDs found:", button_ids)
-    else:
-        print("Failed to find new button IDs.")
